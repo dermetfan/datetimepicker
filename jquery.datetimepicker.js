@@ -2664,6 +2664,11 @@ var datetimepickerFactory = function ($) {
 		this.desc = desc;
 		this.style = style;
 	}
+
+	// Provide access to the host jQuery object (circular reference).
+	$.fn.datetimepicker.$ = $;
+
+	return $.fn.datetimepicker;
 };
 ;(function (factory) {
 	if ( typeof define === 'function' && define.amd ) {
